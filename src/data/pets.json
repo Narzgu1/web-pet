@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Whiskers",
+    "type": "Cat",
+    "breed": "Siamese",
+    "age": "2 years",
+    "gender": "Female",
+    "avatar": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=100&q=60",
+    "vaccinationStatus": true,
+    "lastVetVisit": "15 Aug 2023",
+    "nextVetVisit": "25 Nov 2023",
+    "annualVaccinations": "Due Jan 2024",
+    "photos": [
+      "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=200&q=60",
+      "https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=200&q=60",
+      "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=200&q=60"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Buddy",
+    "type": "Dog",
+    "breed": "Golden Retriever",
+    "age": "3 years",
+    "gender": "Male",
+    "avatar": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=100&q=60",
+    "vaccinationStatus": true,
+    "lastVetVisit": "10 Sep 2023",
+    "nextVetVisit": "15 Dec 2023",
+    "annualVaccinations": "Due Feb 2024",
+    "photos": []
+  }
+]
+

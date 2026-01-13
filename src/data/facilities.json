@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "name": "Greenfield Park",
+    "type": "Park",
+    "description": "A spacious park with lush greenery, ideal for pet walks. Features a dedicated off-leash area.",
+    "rating": 4.5,
+    "reviews": 120,
+    "lat": 50.4501,
+    "lng": 30.5234
+  },
+  {
+    "id": 2,
+    "name": "Central Vet Clinic",
+    "type": "Veterinarian",
+    "description": "Full-service veterinary clinic with emergency care available.",
+    "rating": 4.8,
+    "reviews": 89,
+    "lat": 50.4511,
+    "lng": 30.5244
+  },
+  {
+    "id": 3,
+    "name": "Pet Paradise Shop",
+    "type": "Pet Shop",
+    "description": "Premium pet supplies and accessories for all your furry friends.",
+    "rating": 4.3,
+    "reviews": 156,
+    "lat": 50.4491,
+    "lng": 30.5224
+  }
+]
+

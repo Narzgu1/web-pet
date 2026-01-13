@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetCareHub — Lost & Found</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style> body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;} </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <nav class="bg-white border-b shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 font-extrabold">
+        <span class="bg-blue-50 text-blue-600 p-1 rounded">🐾</span> PetCareHub
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-semibold">
+        <a class="text-gray-500 hover:text-blue-600 transition" href="index.html">Home</a>
+        <a class="text-gray-500 hover:text-blue-600 transition" href="forum.html">Forum</a>
+        <a class="text-gray-500 hover:text-blue-600 transition" href="pet-profile.html">Pet Profile</a>
+        <a class="text-gray-500 hover:text-blue-600 transition" href="facilities.html">Facilities Map</a>
+        <a class="text-blue-600 border-b-2 border-blue-600 pb-1" href="lost-found.html">Lost & Found</a>
+        <a class="text-gray-500 hover:text-blue-600 transition" href="admin.html">Admin</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <input type="text" placeholder="Search pets..." class="hidden lg:block border rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-blue-400 outline-none">
+        <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold transition">Search</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      
+      <!-- Report Form -->
+      <section class="lg:col-span-5">
+        <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-8">
+          <h2 class="text-2xl font-extrabold mb-6">Report a Lost or Found Pet</h2>
+          <form class="space-y-4" action="#" method="post">
+            <div>
+              <label for="petName" class="block text-xs font-bold text-gray-400 uppercase mb-1 ml-1">Pet Name</label>
+              <input type="text" id="petName" name="petName" class="w-full bg-gray-50 border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="e.g. Charlie" required>
+            </div>
+            <div>
+              <label for="location" class="block text-xs font-bold text-gray-400 uppercase mb-1 ml-1">Location</label>
+              <input type="text" id="location" name="location" class="w-full bg-gray-50 border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Last seen near..." required>
+            </div>
+            <div>
+              <label for="description" class="block text-xs font-bold text-gray-400 uppercase mb-1 ml-1">Description</label>
+              <textarea id="description" name="description" rows="4" class="w-full bg-gray-50 border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="Color, collar, behavior..." required></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-extrabold py-4 rounded-2xl shadow-lg transition">
+              Submit Report
+            </button>
+          </form>
+        </div>
+
+        <div class="mt-8 bg-blue-50 rounded-2xl p-6 border border-blue-100">
+          <h3 class="font-extrabold text-blue-800">Stay Informed</h3>
+          <p class="text-sm text-blue-600 mt-1">Receive notifications about local lost pet reports.</p>
+          <button class="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-xl font-bold text-sm shadow-md transition">Enable Notifications</button>
+        </div>
+      </section>
+
+      <!-- Posts Grid -->
+      <section class="lg:col-span-7">
+        <h2 class="text-2xl font-extrabold mb-6">Current Lost & Found Posts</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Card 1 -->
+          <div class="bg-white rounded-3xl border border-gray-100 p-6 text-center shadow-sm hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=300&q=60" class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-gray-50 mb-4" alt="Charlie the dog">
+            <h3 class="font-extrabold text-lg">Charlie</h3>
+            <p class="text-xs font-bold text-red-500 uppercase mt-1">Lost</p>
+            <p class="text-sm text-gray-500 mt-2">Lost near Central Park, wearing a red collar.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-3xl border border-gray-100 p-6 text-center shadow-sm hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=300&q=60" class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-gray-50 mb-4" alt="Whiskers the cat">
+            <h3 class="font-extrabold text-lg">Whiskers</h3>
+            <p class="text-xs font-bold text-green-500 uppercase mt-1">Found</p>
+            <p class="text-sm text-gray-500 mt-2">Found near Elm Street, very friendly.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white rounded-3xl border border-gray-100 p-6 text-center shadow-sm hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1585110396054-c8112a91b55a?auto=format&fit=crop&w=300&q=60" class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-gray-50 mb-4" alt="Floppy the rabbit">
+            <h3 class="font-extrabold text-lg">Floppy</h3>
+            <p class="text-xs font-bold text-red-500 uppercase mt-1">Lost</p>
+            <p class="text-sm text-gray-500 mt-2">Lost in the downtown area, very skittish.</p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white rounded-3xl border border-gray-100 p-6 text-center shadow-sm hover:shadow-md transition">
+            <img src="https://images.unsplash.com/photo-1552728089-57bdde30eba3?auto=format&fit=crop&w=300&q=60" class="w-32 h-32 mx-auto rounded-full object-cover border-4 border-gray-50 mb-4" alt="Polly the bird">
+            <h3 class="font-extrabold text-lg">Polly</h3>
+            <p class="text-xs font-bold text-green-500 uppercase mt-1">Found</p>
+            <p class="text-sm text-gray-500 mt-2">Found in Maple Park, loves sunflower seeds.</p>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t">
+    <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-gray-500">
+        <a href="#" class="hover:text-blue-600">Contact Us</a>
+        <a href="#" class="hover:text-blue-600">Privacy Policy</a>
+        <a href="#" class="hover:text-blue-600">Terms of Service</a>
+      </div>
+      <div class="flex items-center gap-4 text-gray-400 text-lg">
+        <a href="#" class="hover:text-pink-500 transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:text-blue-600 transition" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="hover:text-gray-900 transition" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="hover:text-sky-500 transition" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+      <div class="text-sm text-gray-400">© 2026 PetCareHub</div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "name": "Charlie",
+    "status": "Lost",
+    "image": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=300&q=60",
+    "description": "Lost near Central Park, wearing a red collar."
+  },
+  {
+    "id": 2,
+    "name": "Whiskers",
+    "status": "Found",
+    "image": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=300&q=60",
+    "description": "Found near Elm Street, very friendly."
+  },
+  {
+    "id": 3,
+    "name": "Floppy",
+    "status": "Lost",
+    "image": "https://images.unsplash.com/photo-1585110396054-c8112a91b55a?auto=format&fit=crop&w=300&q=60",
+    "description": "Lost in the downtown area, very skittish."
+  },
+  {
+    "id": 4,
+    "name": "Polly",
+    "status": "Found",
+    "image": "https://images.unsplash.com/photo-1552728089-57bdde30eba3?auto=format&fit=crop&w=300&q=60",
+    "description": "Found in Maple Park, loves sunflower seeds."
+  }
+]
+

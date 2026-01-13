@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetCareHub — Pet Profile</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style> body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;} </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="bg-white border-b shadow-sm sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-2 font-extrabold">
+        <span class="bg-blue-50 text-blue-600 p-1 rounded">🐾</span> PetCareHub
+      </a>
+      <div class="hidden md:flex items-center gap-7 text-sm font-semibold">
+        <a class="text-gray-500 hover:text-blue-600 transition" href="index.html">Home</a>
+        <a class="text-gray-500 hover:text-blue-600 transition" href="forum.html">Forum</a>
+        <a class="text-blue-600 border-b-2 border-blue-600 pb-1" href="pet-profile.html">Pet Profile</a>
+        <a class="text-gray-500 hover:text-blue-600 transition" href="facilities.html">Facilities Map</a>
+        <a class="text-gray-500 hover:text-blue-600 transition" href="lost-found.html">Lost & Found</a>
+        <a class="text-gray-500 hover:text-blue-600 transition" href="admin.html">Admin</a>
+      </div>
+      <button class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-xl text-sm font-bold shadow-md transition">
+        Edit Profile
+      </button>
+    </div>
+  </nav>
+
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+      <!-- Sidebar: My Pets -->
+      <aside class="lg:col-span-3">
+        <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-6">
+          <div class="flex items-center justify-between mb-6">
+            <h2 class="text-xl font-extrabold">My Pets</h2>
+            <button class="bg-blue-500 text-white px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-blue-600 transition">Add New</button>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Active Pet -->
+            <div class="flex items-center justify-between p-3 rounded-2xl bg-blue-50 border border-blue-100">
+              <div class="flex items-center gap-3">
+                <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=100&q=60" class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm" alt="Whiskers the cat">
+                <div>
+                  <p class="font-bold text-sm">Whiskers</p>
+                  <p class="text-xs text-gray-400">Cat</p>
+                </div>
+              </div>
+              <button class="text-xs font-bold text-blue-500 hover:text-blue-600">Edit</button>
+            </div>
+
+            <!-- Other Pet -->
+            <div class="flex items-center justify-between p-3 rounded-2xl border border-gray-50 hover:bg-gray-50 transition cursor-pointer">
+              <div class="flex items-center gap-3">
+                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=100&q=60" class="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm" alt="Buddy the dog">
+                <div>
+                  <p class="font-bold text-sm">Buddy</p>
+                  <p class="text-xs text-gray-400">Dog</p>
+                </div>
+              </div>
+              <button class="text-xs font-bold text-gray-300 hover:text-blue-500">Edit</button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content: Profile Details -->
+      <section class="lg:col-span-9 space-y-6">
+        
+        <div class="bg-white rounded-3xl border border-gray-100 shadow-sm p-8">
+          <h1 class="text-3xl font-extrabold mb-8">Pet Profile: Whiskers</h1>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Details Card -->
+            <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+              <h3 class="font-extrabold text-lg mb-4">Details</h3>
+              <div class="space-y-3">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-400 font-semibold">Breed:</span>
+                  <span class="font-bold">Siamese</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-400 font-semibold">Age:</span>
+                  <span class="font-bold">2 years</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-400 font-semibold">Gender:</span>
+                  <span class="font-bold">Female</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Health Records Card -->
+            <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+              <h3 class="font-extrabold text-lg mb-4">Health Records</h3>
+              <div class="flex items-center justify-between mb-4">
+                <span class="text-sm text-gray-400 font-semibold">Vaccination Status:</span>
+                <div class="flex items-center gap-3">
+                  <span id="statusLabel" class="text-xs font-bold text-blue-600">Up to date</span>
+                  <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="vaccineToggle" class="sr-only peer" checked>
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-500"></div>
+                  </label>
+                </div>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span class="text-gray-400 font-semibold">Last Vet Visit:</span>
+                <span class="font-bold">15 Aug 2023</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo Gallery -->
+          <div class="mt-8">
+            <h3 class="font-extrabold text-lg mb-4">Photo Gallery</h3>
+            <div class="flex gap-4 overflow-x-auto pb-2">
+              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=200&q=60" class="w-24 h-24 rounded-2xl object-cover shadow-sm border-2 border-white" alt="Whiskers photo 1">
+              <img src="https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=200&q=60" class="w-24 h-24 rounded-2xl object-cover shadow-sm border-2 border-white" alt="Whiskers photo 2">
+              <img src="https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=200&q=60" class="w-24 h-24 rounded-2xl object-cover shadow-sm border-2 border-white" alt="Whiskers photo 3">
+              <div class="w-24 h-24 rounded-2xl border-2 border-dashed border-gray-200 flex items-center justify-center text-gray-300 cursor-pointer hover:border-blue-300 hover:text-blue-300 transition">
+                <span class="text-2xl">+</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reminders -->
+          <div class="mt-8 bg-gray-50 rounded-2xl p-6 border border-gray-100">
+            <h3 class="font-extrabold text-lg mb-4">Reminders</h3>
+            <div class="space-y-3">
+              <div class="flex justify-between text-sm">
+                <span class="text-gray-400 font-semibold">Next Vet Visit:</span>
+                <span class="font-bold text-blue-600">25 Nov 2023</span>
+              </div>
+              <div class="flex justify-between text-sm">
+                <span class="text-gray-400 font-semibold">Annual Vaccinations:</span>
+                <span class="font-bold text-red-500">Due Jan 2024</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('vaccineToggle');
+    const label = document.getElementById('statusLabel');
+
+    toggle.addEventListener('change', () => {
+      if(toggle.checked) {
+        label.innerText = 'Up to date';
+        label.classList.replace('text-gray-400', 'text-blue-600');
+      } else {
+        label.innerText = 'Needs update';
+        label.classList.replace('text-blue-600', 'text-gray-400');
+      }
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t">
+    <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-gray-500">
+        <a href="#" class="hover:text-blue-600">Contact Us</a>
+        <a href="#" class="hover:text-blue-600">Privacy Policy</a>
+        <a href="#" class="hover:text-blue-600">Terms of Service</a>
+      </div>
+      <div class="flex items-center gap-4 text-gray-400 text-lg">
+        <a href="#" class="hover:text-pink-500 transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:text-blue-600 transition" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="hover:text-gray-900 transition" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="hover:text-sky-500 transition" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+      </div>
+      <div class="text-sm text-gray-400">© 2026 PetCareHub</div>
+    </div>
+  </footer>
+
+</body>
+</html>

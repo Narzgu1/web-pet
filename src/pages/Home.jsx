@@ -42,7 +42,7 @@ const Home = () => {
               />
             </div>
             <h3 className="mt-6 text-xl font-extrabold">Personal Account</h3>
-            <p className="mt-2 text-sm text-gray-500">Manage your pet's profile and settings.</p>
+            <p className="mt-2 text-sm text-gray-500">Manage your pets profile and settings.</p>
           </Link>
 
           <Link to="/facilities" className="group bg-white rounded-3xl border border-gray-100 p-8 text-center shadow-sm hover:shadow-md transition">

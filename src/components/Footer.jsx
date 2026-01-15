@@ -1,31 +1,47 @@
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   return (
-    <footer className="bg-white border-t">
-      <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-gray-500">
-          <a href="#" className="hover:text-blue-600">Contact Us</a>
-          <a href="#" className="hover:text-blue-600">Privacy Policy</a>
-          <a href="#" className="hover:text-blue-600">Terms of Service</a>
+    <footer className="bg-white border-t border-gray-100 py-8 mt-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          {/* Links */}
+          <div className="flex flex-wrap justify-center gap-8">
+            <Link to="/contact" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">
+              Contact Us
+            </Link>
+            <Link to="/privacy" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="text-sm font-medium text-gray-500 hover:text-gray-900 transition-colors">
+              Terms of Service
+            </Link>
+          </div>
+
+          {/* Social Icons */}
+          <div className="flex items-center gap-6">
+            <a href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
+              <i className="fab fa-instagram text-xl"></i>
+            </a>
+            <a href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
+              <i className="fab fa-facebook text-xl"></i>
+            </a>
+            <a href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
+              <i className="fab fa-tiktok text-xl"></i>
+            </a>
+            <a href="#" className="text-gray-400 hover:text-gray-900 transition-colors">
+              <i className="fab fa-telegram text-xl"></i>
+            </a>
+          </div>
+
+          {/* Copyright */}
+          <div className="text-sm text-gray-400 font-medium">
+            © 2026 PetCareHub
+          </div>
         </div>
-        <div className="flex items-center gap-4 text-gray-400 text-lg">
-          <a href="#" className="hover:text-pink-500 transition" aria-label="Instagram">
-            <i className="fa-brands fa-instagram"></i>
-          </a>
-          <a href="#" className="hover:text-blue-600 transition" aria-label="Facebook">
-            <i className="fa-brands fa-facebook"></i>
-          </a>
-          <a href="#" className="hover:text-gray-900 transition" aria-label="TikTok">
-            <i className="fa-brands fa-tiktok"></i>
-          </a>
-          <a href="#" className="hover:text-sky-500 transition" aria-label="Telegram">
-            <i className="fa-brands fa-telegram"></i>
-          </a>
-        </div>
-        <div className="text-sm text-gray-400">© 2026 PetCareHub</div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
-
+export default Footer;

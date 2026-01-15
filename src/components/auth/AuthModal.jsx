@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { useAuth } from '../contexts/AuthContext'
-import Modal from './Modal'
+import { useAuth } from '../../contexts/AuthContext'
+import Modal from '../Modal'
 
 const AuthModal = ({ isOpen, onClose, initialMode = 'login' }) => {
   const [mode, setMode] = useState(initialMode) // 'login' or 'register'
@@ -126,4 +126,3 @@ const AuthModal = ({ isOpen, onClose, initialMode = 'login' }) => {
 }
 
 export default AuthModal
-

@@ -6,8 +6,11 @@
     "description": "A spacious park with lush greenery, ideal for pet walks. Features a dedicated off-leash area.",
     "rating": 4.5,
     "reviews": 120,
-    "lat": 50.4501,
-    "lng": 30.5234
+    "address": "123 Green St, City",
+    "coordinates": {
+      "lat": 50.4501,
+      "lng": 30.5234
+    }
   },
   {
     "id": 2,
@@ -16,8 +19,11 @@
     "description": "Full-service veterinary clinic with emergency care available.",
     "rating": 4.8,
     "reviews": 89,
-    "lat": 50.4511,
-    "lng": 30.5244
+    "address": "456 Central Ave, City",
+    "coordinates": {
+      "lat": 50.4511,
+      "lng": 30.5244
+    }
   },
   {
     "id": 3,
@@ -26,8 +32,10 @@
     "description": "Premium pet supplies and accessories for all your furry friends.",
     "rating": 4.3,
     "reviews": 156,
-    "lat": 50.4491,
-    "lng": 30.5224
+    "address": "789 Paradise Rd, City",
+    "coordinates": {
+      "lat": 50.4491,
+      "lng": 30.5224
+    }
   }
 ]
-

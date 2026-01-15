@@ -1,117 +1,106 @@
-import { Link, useLocation } from 'react-router-dom'
-import { useState } from 'react'
-import { useAuth } from '../contexts/AuthContext'
-import AuthModal from './AuthModal'
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
+import AuthModal from './auth/AuthModal';
 
 const Navbar = () => {
-  const location = useLocation()
-  const { user, logout } = useAuth()
-  const [authModalOpen, setAuthModalOpen] = useState(false)
-  
-  const isActive = (path) => location.pathname === path
+  const location = useLocation();
+  const { user, logout } = useAuth();
+  const [authModalOpen, setAuthModalOpen] = useState(false);
 
-  const navItems = [
+  const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/forum', label: 'Forum' },
     { path: '/pet-profile', label: 'Pet Profile' },
     { path: '/facilities', label: 'Facilities Map' },
     { path: '/lost-found', label: 'Lost & Found' },
     { path: '/admin', label: 'Admin' },
-  ]
+  ];
 
   const getActionButton = () => {
     if (location.pathname === '/pet-profile') {
       return (
-        <button className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-xl text-sm font-bold shadow-md transition">
+        <button className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-xl text-sm font-medium transition-colors">
           Edit Profile
         </button>
-      )
+      );
     }
     if (location.pathname === '/lost-found') {
       return (
-        <div className="flex items-center gap-2">
-          <input
-            type="text"
-            placeholder="Search pets..."
-            className="hidden lg:block border rounded-lg px-3 py-1.5 text-sm focus:ring-2 focus:ring-blue-400 outline-none"
-          />
-          <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold transition">
-            Search
-          </button>
-        </div>
-      )
-    }
-    if (location.pathname === '/facilities') {
-      return (
-        <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold transition">
-          Add New Location
+        <button className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-xl text-sm font-medium transition-colors">
+          Report Pet
         </button>
-      )
+      );
     }
     if (location.pathname === '/admin') {
       return (
-        <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold transition">
+        <button className="bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 rounded-xl text-sm font-medium transition-colors">
           Admin Actions
         </button>
-      )
+      );
     }
-    return (
-      <button className="rounded-xl bg-blue-500 px-5 py-2 text-sm font-bold text-white shadow hover:bg-blue-600 transition">
-        Register Now
-      </button>
-    )
-  }
+    return null;
+  };
 
   return (
-    <nav className="bg-white border-b shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="h-16 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2 font-extrabold tracking-tight">
-            <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
-              🐾
-            </span>
-            <span>PetCareHub</span>
+    <nav className="bg-white border-b border-gray-100 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16 items-center">
+          {/* Logo */}
+          <Link to="/" className="flex items-center gap-2 group">
+            <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+              <i className="fas fa-paw text-white text-sm"></i>
+            </div>
+            <span className="text-xl font-bold text-gray-900 tracking-tight">PetCareHub</span>
           </Link>
-          <div className="hidden md:flex items-center gap-7 text-sm font-semibold">
-            {navItems.map((item) => (
+
+          {/* Navigation Links */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navLinks.map((link) => (
               <Link
-                key={item.path}
-                to={item.path}
-                className={`transition ${
-                  isActive(item.path)
+                key={link.path}
+                to={link.path}
+                className={`text-sm font-medium transition-colors ${
+                  location.pathname === link.path
                     ? 'text-blue-600 border-b-2 border-blue-600 pb-1'
-                    : 'text-gray-500 hover:text-blue-600'
+                    : 'text-gray-500 hover:text-gray-900'
                 }`}
               >
-                {item.label}
+                {link.label}
               </Link>
             ))}
           </div>
-          {user ? (
-            <div className="flex items-center gap-3">
-              <span className="text-sm text-gray-600">Hello, {user.name}</span>
-              {location.pathname === '/admin' && <span className="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">Admin</span>}
+
+          {/* Right Side Actions */}
+          <div className="flex items-center gap-4">
+            {/* Вызов функции кнопки действия */}
+            {getActionButton()}
+
+            {user ? (
+              <div className="flex items-center gap-4 ml-4 pl-4 border-l border-gray-200">
+                <span className="text-sm text-gray-600">Hello, {user.name}</span>
+                <button
+                  onClick={logout}
+                  className="bg-gray-500 hover:bg-gray-600 text-white px-5 py-2 rounded-xl text-sm font-medium transition-colors"
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
               <button
-                onClick={logout}
-                className="rounded-xl bg-gray-500 px-5 py-2 text-sm font-bold text-white shadow hover:bg-gray-600 transition"
+                onClick={() => setAuthModalOpen(true)}
+                className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-xl text-sm font-medium transition-colors shadow-sm"
               >
-                Logout
+                Login
               </button>
-            </div>
-          ) : (
-            <button
-              onClick={() => setAuthModalOpen(true)}
-              className="rounded-xl bg-blue-500 px-5 py-2 text-sm font-bold text-white shadow hover:bg-blue-600 transition"
-            >
-              {location.pathname === '/' ? 'Register Now' : 'Login'}
-            </button>
-          )}
+            )}
+          </div>
         </div>
       </div>
+
       <AuthModal isOpen={authModalOpen} onClose={() => setAuthModalOpen(false)} />
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
-
+export default Navbar;

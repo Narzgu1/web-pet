@@ -1,35 +1,50 @@
 [
   {
     "id": 1,
-    "name": "Whiskers",
-    "type": "Cat",
-    "breed": "Siamese",
-    "age": "2 years",
-    "gender": "Female",
-    "avatar": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=100&q=60",
-    "vaccinationStatus": true,
-    "lastVetVisit": "15 Aug 2023",
-    "nextVetVisit": "25 Nov 2023",
-    "annualVaccinations": "Due Jan 2024",
-    "photos": [
-      "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=200&q=60",
-      "https://images.unsplash.com/photo-1573865526739-10659fec78a5?auto=format&fit=crop&w=200&q=60",
-      "https://images.unsplash.com/photo-1495360010541-f48722b34f7d?auto=format&fit=crop&w=200&q=60"
-    ]
+    "status": "Lost",
+    "type": "Dog",
+    "breed": "Golden Retriever",
+    "location": "Central Park, New York",
+    "date": "January 10, 2024",
+    "description": "Friendly dog, wearing a red collar with a bell. Responds to the name 'Max'. Last seen near the fountain.",
+    "contactName": "Sarah Johnson",
+    "contactPhone": "+1 (555) 123-4567",
+    "image": "https://placehold.co/400x300?text=Golden+Retriever"
   },
   {
     "id": 2,
-    "name": "Buddy",
+    "status": "Found",
+    "type": "Cat",
+    "breed": "Tabby Cat",
+    "location": "Brooklyn, NY",
+    "date": "January 12, 2024",
+    "description": "Found near the subway station. Very friendly, appears well-cared for. Wearing a blue collar but no tags.",
+    "contactName": "Mike Chen",
+    "contactPhone": "+1 (555) 987-6543",
+    "image": "https://placehold.co/400x300?text=Tabby+Cat"
+  },
+  {
+    "id": 3,
+    "status": "Lost",
     "type": "Dog",
-    "breed": "Golden Retriever",
-    "age": "3 years",
-    "gender": "Male",
-    "avatar": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=100&q=60",
-    "vaccinationStatus": true,
-    "lastVetVisit": "10 Sep 2023",
-    "nextVetVisit": "15 Dec 2023",
-    "annualVaccinations": "Due Feb 2024",
-    "photos": []
+    "breed": "Husky",
+    "location": "Queens, NY",
+    "date": "January 8, 2024",
+    "description": "Blue eyes, black and white fur. Very energetic. Escaped from backyard during storm.",
+    "contactName": "Emily Rodriguez",
+    "contactPhone": "+1 (555) 456-7890",
+    "image": "https://placehold.co/400x300?text=Husky"
+  },
+  {
+    "id": 4,
+    "status": "Found",
+    "type": "Bird",
+    "breed": "Parakeet",
+    "location": "Manhattan, NY",
+    "date": "January 14, 2024",
+    "description": "Green and yellow parakeet found on balcony. Very tame, seems domesticated.",
+    "contactName": "David Kim",
+    "contactPhone": "+1 (555) 321-0987",
+    "image": "https://placehold.co/400x300?text=Parakeet"
   }
 ]
-

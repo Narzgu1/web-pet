@@ -13,7 +13,7 @@ import Admin from './pages/Admin'
 function App() {
   return (
     <AuthProvider>
-      <Router>
+     <Router future={{ v7_startTransition: true }}>
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-1">
